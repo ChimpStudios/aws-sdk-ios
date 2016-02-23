@@ -7,6 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D49FAA51C7CD53F00DD61DC /* AWSS3Service.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF55A0D1AB377010067F4F1 /* AWSS3Service.m */; };
+		0D49FAA61C7CD53F00DD61DC /* AWSS3Resources.m in Sources */ = {isa = PBXBuildFile; fileRef = BDB73D861B1D3F4900717559 /* AWSS3Resources.m */; };
+		0D49FAA71C7CD53F00DD61DC /* AWSS3Model.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF55A0F1AB377010067F4F1 /* AWSS3Model.m */; };
+		0D49FAA81C7CD53F00DD61DC /* AWSS3TransferManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF55A0B1AB377010067F4F1 /* AWSS3TransferManager.m */; };
+		0D49FAA91C7CD53F00DD61DC /* AWSS3PreSignedURL.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF55A091AB377010067F4F1 /* AWSS3PreSignedURL.m */; };
+		0D49FAAA1C7CD53F00DD61DC /* AWSS3TransferUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = CE83D0E91B7171EB004A42E4 /* AWSS3TransferUtility.m */; };
+		0D49FAAD1C7CD53F00DD61DC /* AWSS3TransferUtility.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE83D0E81B7171EB004A42E4 /* AWSS3TransferUtility.h */; };
+		0D49FAAE1C7CD53F00DD61DC /* AWSS3Service.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = CEE7DE721AC1E1DA0095C4B7 /* AWSS3Service.h */; };
+		0D49FAAF1C7CD53F00DD61DC /* AWSS3PreSignedURL.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDF55A081AB377010067F4F1 /* AWSS3PreSignedURL.h */; };
+		0D49FAB01C7CD53F00DD61DC /* AWSS3TransferManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDF55A0A1AB377010067F4F1 /* AWSS3TransferManager.h */; };
+		0D49FAB11C7CD53F00DD61DC /* AWSS3.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDF55A0C1AB377010067F4F1 /* AWSS3.h */; };
+		0D49FAB21C7CD53F00DD61DC /* AWSS3Model.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDF55A0E1AB377010067F4F1 /* AWSS3Model.h */; };
+		0D49FAB41C7CD53F00DD61DC /* AWSS3Model.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF55A0E1AB377010067F4F1 /* AWSS3Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D49FAB51C7CD53F00DD61DC /* AWSS3PreSignedURL.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF55A081AB377010067F4F1 /* AWSS3PreSignedURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D49FAB61C7CD53F00DD61DC /* AWSS3Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB73D851B1D3F4900717559 /* AWSS3Resources.h */; };
+		0D49FAB71C7CD53F00DD61DC /* AWSS3TransferUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = CE83D0E81B7171EB004A42E4 /* AWSS3TransferUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D49FAB81C7CD53F00DD61DC /* AWSS3TransferManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF55A0A1AB377010067F4F1 /* AWSS3TransferManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D49FAB91C7CD53F00DD61DC /* AWSS3Service.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE7DE721AC1E1DA0095C4B7 /* AWSS3Service.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D49FABA1C7CD53F00DD61DC /* AWSS3.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF55A0C1AB377010067F4F1 /* AWSS3.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D49FABC1C7CD53F00DD61DC /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE65523E1BEC368100DACBC2 /* module.modulemap */; };
 		BD00003A1AB8C526004496EF /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = BD0000391AB8C526004496EF /* credentials.json */; };
 		BD0000581AB8E18E004496EF /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0000571AB8E18E004496EF /* AWSTestUtility.m */; };
 		BD00FF411AB8B6D2004496EF /* libAWSCore.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BD00FF401AB8B6D2004496EF /* libAWSCore.a */; };
@@ -67,6 +87,31 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		0D49FAAC1C7CD53F00DD61DC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0D49FAAD1C7CD53F00DD61DC /* AWSS3TransferUtility.h in CopyFiles */,
+				0D49FAAE1C7CD53F00DD61DC /* AWSS3Service.h in CopyFiles */,
+				0D49FAAF1C7CD53F00DD61DC /* AWSS3PreSignedURL.h in CopyFiles */,
+				0D49FAB01C7CD53F00DD61DC /* AWSS3TransferManager.h in CopyFiles */,
+				0D49FAB11C7CD53F00DD61DC /* AWSS3.h in CopyFiles */,
+				0D49FAB21C7CD53F00DD61DC /* AWSS3Model.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D49FABB1C7CD53F00DD61DC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "modules/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				0D49FABC1C7CD53F00DD61DC /* module.modulemap in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDF559EA1AB376DC0067F4F1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -95,6 +140,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D49FAC01C7CD53F00DD61DC /* libAWSS3_OSX.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libAWSS3_OSX.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0000391AB8C526004496EF /* credentials.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = credentials.json; path = AWSCoreTests/credentials.json; sourceTree = SOURCE_ROOT; };
 		BD0000561AB8E18E004496EF /* AWSTestUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AWSTestUtility.h; path = AWSCoreTests/AWSTestUtility.h; sourceTree = SOURCE_ROOT; };
 		BD0000571AB8E18E004496EF /* AWSTestUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AWSTestUtility.m; path = AWSCoreTests/AWSTestUtility.m; sourceTree = SOURCE_ROOT; };
@@ -129,6 +175,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D49FAAB1C7CD53F00DD61DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDF126161B45C2C100DFBFEC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +248,7 @@
 				BDF559EC1AB376DC0067F4F1 /* libAWSS3.a */,
 				BDF559F71AB376DC0067F4F1 /* AWSS3Tests.xctest */,
 				BDF1261F1B45C2C100DFBFEC /* AWSS3UnitTests.xctest */,
+				0D49FAC01C7CD53F00DD61DC /* libAWSS3_OSX.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -246,6 +300,20 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0D49FAB31C7CD53F00DD61DC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D49FAB41C7CD53F00DD61DC /* AWSS3Model.h in Headers */,
+				0D49FAB51C7CD53F00DD61DC /* AWSS3PreSignedURL.h in Headers */,
+				0D49FAB61C7CD53F00DD61DC /* AWSS3Resources.h in Headers */,
+				0D49FAB71C7CD53F00DD61DC /* AWSS3TransferUtility.h in Headers */,
+				0D49FAB81C7CD53F00DD61DC /* AWSS3TransferManager.h in Headers */,
+				0D49FAB91C7CD53F00DD61DC /* AWSS3Service.h in Headers */,
+				0D49FABA1C7CD53F00DD61DC /* AWSS3.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDF55A061AB376F50067F4F1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +331,25 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0D49FAA31C7CD53F00DD61DC /* AWSS3_OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D49FABD1C7CD53F00DD61DC /* Build configuration list for PBXNativeTarget "AWSS3_OSX" */;
+			buildPhases = (
+				0D49FAA41C7CD53F00DD61DC /* Sources */,
+				0D49FAAB1C7CD53F00DD61DC /* Frameworks */,
+				0D49FAAC1C7CD53F00DD61DC /* CopyFiles */,
+				0D49FAB31C7CD53F00DD61DC /* Headers */,
+				0D49FABB1C7CD53F00DD61DC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AWSS3_OSX;
+			productName = S3;
+			productReference = 0D49FAC01C7CD53F00DD61DC /* libAWSS3_OSX.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 		BDF1260D1B45C2C100DFBFEC /* AWSS3UnitTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDF1261C1B45C2C100DFBFEC /* Build configuration list for PBXNativeTarget "AWSS3UnitTests" */;
@@ -281,9 +368,9 @@
 			productReference = BDF1261F1B45C2C100DFBFEC /* AWSS3UnitTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		BDF559EB1AB376DC0067F4F1 /* AWSS3 */ = {
+		BDF559EB1AB376DC0067F4F1 /* AWSS3_IOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = BDF55A001AB376DC0067F4F1 /* Build configuration list for PBXNativeTarget "AWSS3" */;
+			buildConfigurationList = BDF55A001AB376DC0067F4F1 /* Build configuration list for PBXNativeTarget "AWSS3_IOS" */;
 			buildPhases = (
 				BDF559E81AB376DC0067F4F1 /* Sources */,
 				BDF559E91AB376DC0067F4F1 /* Frameworks */,
@@ -295,7 +382,7 @@
 			);
 			dependencies = (
 			);
-			name = AWSS3;
+			name = AWSS3_IOS;
 			productName = S3;
 			productReference = BDF559EC1AB376DC0067F4F1 /* libAWSS3.a */;
 			productType = "com.apple.product-type.library.static";
@@ -347,9 +434,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				BDF559EB1AB376DC0067F4F1 /* AWSS3 */,
+				BDF559EB1AB376DC0067F4F1 /* AWSS3_IOS */,
 				BDF559F61AB376DC0067F4F1 /* AWSS3Tests */,
 				BDF1260D1B45C2C100DFBFEC /* AWSS3UnitTests */,
+				0D49FAA31C7CD53F00DD61DC /* AWSS3_OSX */,
 			);
 		};
 /* End PBXProject section */
@@ -373,6 +461,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0D49FAA41C7CD53F00DD61DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D49FAA51C7CD53F00DD61DC /* AWSS3Service.m in Sources */,
+				0D49FAA61C7CD53F00DD61DC /* AWSS3Resources.m in Sources */,
+				0D49FAA71C7CD53F00DD61DC /* AWSS3Model.m in Sources */,
+				0D49FAA81C7CD53F00DD61DC /* AWSS3TransferManager.m in Sources */,
+				0D49FAA91C7CD53F00DD61DC /* AWSS3PreSignedURL.m in Sources */,
+				0D49FAAA1C7CD53F00DD61DC /* AWSS3TransferUtility.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDF126101B45C2C100DFBFEC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,17 +512,59 @@
 /* Begin PBXTargetDependency section */
 		BDF1260E1B45C2C100DFBFEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BDF559EB1AB376DC0067F4F1 /* AWSS3 */;
+			target = BDF559EB1AB376DC0067F4F1 /* AWSS3_IOS */;
 			targetProxy = BDF1260F1B45C2C100DFBFEC /* PBXContainerItemProxy */;
 		};
 		BDF559FA1AB376DC0067F4F1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = BDF559EB1AB376DC0067F4F1 /* AWSS3 */;
+			target = BDF559EB1AB376DC0067F4F1 /* AWSS3_IOS */;
 			targetProxy = BDF559F91AB376DC0067F4F1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		0D49FABE1C7CD53F00DD61DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				MODULEMAP_FILE = "$(PRODUCT_NAME:c99extidentifier)/module.modulemap";
+				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Debug;
+		};
+		0D49FABF1C7CD53F00DD61DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = NO;
+				CLANG_ENABLE_MODULE_DEBUGGING = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DEFINES_MODULE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
+				MODULEMAP_FILE = "$(PRODUCT_NAME:c99extidentifier)/module.modulemap";
+				OTHER_CFLAGS = "-fembed-bitcode";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+			};
+			name = Release;
+		};
 		BDF1261D1B45C2C100DFBFEC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -638,6 +781,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D49FABD1C7CD53F00DD61DC /* Build configuration list for PBXNativeTarget "AWSS3_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D49FABE1C7CD53F00DD61DC /* Debug */,
+				0D49FABF1C7CD53F00DD61DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BDF1261C1B45C2C100DFBFEC /* Build configuration list for PBXNativeTarget "AWSS3UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -656,7 +808,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDF55A001AB376DC0067F4F1 /* Build configuration list for PBXNativeTarget "AWSS3" */ = {
+		BDF55A001AB376DC0067F4F1 /* Build configuration list for PBXNativeTarget "AWSS3_IOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BDF55A011AB376DC0067F4F1 /* Debug */,

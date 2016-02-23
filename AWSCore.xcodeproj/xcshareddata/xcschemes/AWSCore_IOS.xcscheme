@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BDF557511AB371480067F4F1"
-               BuildableName = "libAWSCore.a"
-               BlueprintName = "AWSCore"
+               BuildableName = "libAWSCore_IOS.a"
+               BlueprintName = "AWSCore_IOS"
                ReferencedContainer = "container:AWSCore.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -435,8 +435,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDF557511AB371480067F4F1"
-            BuildableName = "libAWSCore.a"
-            BlueprintName = "AWSCore"
+            BuildableName = "libAWSCore_IOS.a"
+            BlueprintName = "AWSCore_IOS"
             ReferencedContainer = "container:AWSCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -457,8 +457,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDF557511AB371480067F4F1"
-            BuildableName = "libAWSCore.a"
-            BlueprintName = "AWSCore"
+            BuildableName = "libAWSCore_IOS.a"
+            BlueprintName = "AWSCore_IOS"
             ReferencedContainer = "container:AWSCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -475,8 +475,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDF557511AB371480067F4F1"
-            BuildableName = "libAWSCore.a"
-            BlueprintName = "AWSCore"
+            BuildableName = "libAWSCore_IOS.a"
+            BlueprintName = "AWSCore_IOS"
             ReferencedContainer = "container:AWSCore.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

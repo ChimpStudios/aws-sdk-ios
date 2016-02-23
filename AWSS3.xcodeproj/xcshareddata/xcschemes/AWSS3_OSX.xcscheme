@@ -14,37 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDF559EB1AB376DC0067F4F1"
-               BuildableName = "libAWSS3.a"
-               BlueprintName = "AWSS3"
-               ReferencedContainer = "container:AWSS3.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDF559F61AB376DC0067F4F1"
-               BuildableName = "AWSS3Tests.xctest"
-               BlueprintName = "AWSS3Tests"
-               ReferencedContainer = "container:AWSS3.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "NO"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDF1260D1B45C2C100DFBFEC"
-               BuildableName = "AWSS3UnitTests.xctest"
-               BlueprintName = "AWSS3UnitTests"
+               BlueprintIdentifier = "0D49FAA31C7CD53F00DD61DC"
+               BuildableName = "libAWSS3_OSX.a"
+               BlueprintName = "AWSS3_OSX"
                ReferencedContainer = "container:AWSS3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -56,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "BDF559F61AB376DC0067F4F1"
-               BuildableName = "AWSS3Tests.xctest"
-               BlueprintName = "AWSS3Tests"
-               ReferencedContainer = "container:AWSS3.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDF559EB1AB376DC0067F4F1"
-            BuildableName = "libAWSS3.a"
-            BlueprintName = "AWSS3"
-            ReferencedContainer = "container:AWSS3.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -92,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDF559EB1AB376DC0067F4F1"
-            BuildableName = "libAWSS3.a"
-            BlueprintName = "AWSS3"
+            BlueprintIdentifier = "0D49FAA31C7CD53F00DD61DC"
+            BuildableName = "libAWSS3_OSX.a"
+            BlueprintName = "AWSS3_OSX"
             ReferencedContainer = "container:AWSS3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -110,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "BDF559EB1AB376DC0067F4F1"
-            BuildableName = "libAWSS3.a"
-            BlueprintName = "AWSS3"
+            BlueprintIdentifier = "0D49FAA31C7CD53F00DD61DC"
+            BuildableName = "libAWSS3_OSX.a"
+            BlueprintName = "AWSS3_OSX"
             ReferencedContainer = "container:AWSS3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

@@ -13,7 +13,14 @@
 // permissions and limitations under the License.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
+#if TARGET_OS_IPHONE
+    #import <UIKit/UIKit.h>
+#elif TARGET_OS_MAC
+    #import <Cocoa/Cocoa.h>
+#endif
+
 #import <AWSCore/AWSCore.h>
 
 NS_ASSUME_NONNULL_BEGIN
@@ -27,7 +34,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  The upload completion handler.
-
+ 
  @param task  The upload task object.
  @param error Returns the error object when the download failed.
  */
@@ -36,7 +43,7 @@ typedef void (^AWSS3TransferUtilityUploadCompletionHandlerBlock) (AWSS3TransferU
 
 /**
  The download completion handler.
-
+ 
  @param task     The download task object.
  @param location When downloading an Amazon S3 object to a file, returns a file URL of the returned object. Otherwise, returns `nil`.
  @param data     When downloading an Amazon S3 object as an `NSData`, returns the returned object as an instance of `NSData`. Otherwise, returns `nil`.
@@ -49,7 +56,7 @@ typedef void (^AWSS3TransferUtilityDownloadCompletionHandlerBlock) (AWSS3Transfe
 
 /**
  The upload progress feedback block.
-
+ 
  @param task                     The upload task object.
  @param bytesSent                The number of bytes sent since the last time this block was called.
  @param totalBytesSent           The total number of bytes sent so far.
@@ -64,7 +71,7 @@ typedef void (^AWSS3TransferUtilityUploadProgressBlock) (AWSS3TransferUtilityUpl
 
 /**
  The download progress feedback block.
-
+ 
  @param task                      The download task object.
  @param bytesWritten              The number of bytes transferred since the last time this delegate method was called.
  @param totalBytesWritten         The total number of bytes transferred so far.
@@ -86,85 +93,85 @@ typedef void (^AWSS3TransferUtilityDownloadProgressBlock) (AWSS3TransferUtilityD
 
 /**
  Returns the singleton service client. If the singleton object does not exist, the SDK instantiates the default service client with `defaultServiceConfiguration` from `[AWSServiceManager defaultServiceManager]`. The reference to this object is maintained by the SDK, and you do not need to retain it manually.
-
+ 
  For example, set the default service configuration in `- application:didFinishLaunchingWithOptions:`
-
+ 
  *Swift*
-
-     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
-         let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
-         AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
-
-         return true
-     }
-
+ 
+ func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+ let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
+ let configuration = AWSServiceConfiguration(region: .USEast1, credentialsProvider: credentialProvider)
+ AWSServiceManager.defaultServiceManager().defaultServiceConfiguration = configuration
+ 
+ return true
+ }
+ 
  *Objective-C*
-
-     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-          AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
-                                                                                                          identityPoolId:@"YourIdentityPoolId"];
-          AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSEast1
-                                                                               credentialsProvider:credentialsProvider];
-          [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
-
-          return YES;
-      }
-
+ 
+ - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
+ identityPoolId:@"YourIdentityPoolId"];
+ AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSEast1
+ credentialsProvider:credentialsProvider];
+ [AWSServiceManager defaultServiceManager].defaultServiceConfiguration = configuration;
+ 
+ return YES;
+ }
+ 
  Then call the following to get the default service client:
-
+ 
  *Swift*
-
-     let S3TransferUtility = AWSS3TransferUtility.defaultS3TransferUtility()
-
+ 
+ let S3TransferUtility = AWSS3TransferUtility.defaultS3TransferUtility()
+ 
  *Objective-C*
-
-     AWSS3TransferUtility *S3TransferUtility = [AWSS3TransferUtility defaultS3TransferUtility];
-
+ 
+ AWSS3TransferUtility *S3TransferUtility = [AWSS3TransferUtility defaultS3TransferUtility];
+ 
  @return The default service client.
  */
 + (instancetype)defaultS3TransferUtility;
 
 /**
  Creates a service client with the given service configuration and registers it for the key.
-
+ 
  For example, set the default service configuration in `- application:didFinishLaunchingWithOptions:`
-
+ 
  *Swift*
-
-     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-         let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
-         let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
-         AWSS3TransferUtility.registerS3TransferUtilityWithConfiguration(configuration, forKey: "USWest2S3TransferUtility")
-
-         return true
-     }
-
+ 
+ func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+ let credentialProvider = AWSCognitoCredentialsProvider(regionType: .USEast1, identityPoolId: "YourIdentityPoolId")
+ let configuration = AWSServiceConfiguration(region: .USWest2, credentialsProvider: credentialProvider)
+ AWSS3TransferUtility.registerS3TransferUtilityWithConfiguration(configuration, forKey: "USWest2S3TransferUtility")
+ 
+ return true
+ }
+ 
  *Objective-C*
-
-     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-         AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
-                                                                                                         identityPoolId:@"YourIdentityPoolId"];
-         AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
-                                                                              credentialsProvider:credentialsProvider];
-
-         [AWSS3TransferUtility registerS3TransferUtilityWithConfiguration:configuration forKey:@"USWest2S3TransferUtility"];
-
-         return YES;
-     }
-
+ 
+ - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ AWSCognitoCredentialsProvider *credentialsProvider = [[AWSCognitoCredentialsProvider alloc] initWithRegionType:AWSRegionUSEast1
+ identityPoolId:@"YourIdentityPoolId"];
+ AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2
+ credentialsProvider:credentialsProvider];
+ 
+ [AWSS3TransferUtility registerS3TransferUtilityWithConfiguration:configuration forKey:@"USWest2S3TransferUtility"];
+ 
+ return YES;
+ }
+ 
  Then call the following to get the service client:
-
+ 
  *Swift*
-
-     let S3TransferUtility = AWSS3TransferUtility(forKey: "USWest2S3TransferUtility")
-
+ 
+ let S3TransferUtility = AWSS3TransferUtility(forKey: "USWest2S3TransferUtility")
+ 
  *Objective-C*
-
-     AWSS3TransferUtility *S3TransferUtility = [AWSS3TransferUtility S3TransferUtilityForKey:@"USWest2S3TransferUtility"];
-
+ 
+ AWSS3TransferUtility *S3TransferUtility = [AWSS3TransferUtility S3TransferUtilityForKey:@"USWest2S3TransferUtility"];
+ 
  @warning After calling this method, do not modify the configuration object. It may cause unspecified behaviors.
-
+ 
  @param configuration A service configuration object.
  @param key           A string to identify the service client.
  */
@@ -173,40 +180,41 @@ typedef void (^AWSS3TransferUtilityDownloadProgressBlock) (AWSS3TransferUtilityD
 
 /**
  Retrieves the service client associated with the key. You need to call `+ registerS3TransferUtilityWithConfiguration:forKey:` before invoking this method. If `+ registerS3TransferUtilityWithConfiguration:forKey:` has not been called in advance or the key does not exist, this method returns `nil`.
-
+ 
  For example, set the default service configuration in `- application:didFinishLaunchingWithOptions:`
-
-     - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-         AWSCognitoCredentialsProvider *credentialsProvider = [AWSCognitoCredentialsProvider credentialsWithRegionType:AWSRegionUSEast1 identityPoolId:@"YourIdentityPoolId"];
-         AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2 credentialsProvider:credentialsProvider];
-
-         [AWSS3TransferUtility registerS3TransferUtilityWithConfiguration:configuration forKey:@"USWest2S3TransferUtility"];
-
-         return YES;
-     }
-
+ 
+ - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+ AWSCognitoCredentialsProvider *credentialsProvider = [AWSCognitoCredentialsProvider credentialsWithRegionType:AWSRegionUSEast1 identityPoolId:@"YourIdentityPoolId"];
+ AWSServiceConfiguration *configuration = [[AWSServiceConfiguration alloc] initWithRegion:AWSRegionUSWest2 credentialsProvider:credentialsProvider];
+ 
+ [AWSS3TransferUtility registerS3TransferUtilityWithConfiguration:configuration forKey:@"USWest2S3TransferUtility"];
+ 
+ return YES;
+ }
+ 
  Then call the following to get the service client:
-
-     AWSS3TransferUtility *S3TransferUtility = [AWSS3TransferUtility S3ForKey:@"USWest2S3TransferUtility"];
-
+ 
+ AWSS3TransferUtility *S3TransferUtility = [AWSS3TransferUtility S3ForKey:@"USWest2S3TransferUtility"];
+ 
  @param key A string to identify the service client.
-
+ 
  @return An instance of the service client.
  */
 + (instancetype)S3TransferUtilityForKey:(NSString *)key;
 
 /**
  Removes the service client associated with the key and release it.
-
+ 
  @warning Before calling this method, make sure no method is running on this client.
-
+ 
  @param key A string to identify the service client.
  */
 + (void)removeS3TransferUtilityForKey:(NSString *)key;
 
+#if TARGET_OS_IPHONE
 /**
- Tells `AWSS3TransferUtility` that events related to a URL session are waiting to be processed. This method needs to be called in the `- application:handleEventsForBackgroundURLSession:completionHandler:` applicatoin delegate for `AWSS3TransferUtility` to work.
-
+ Tells `AWSS3TransferUtility` that events related to a URL session are waiting to be processed. This method needs to be called in the `- application:handleEventsForBackgroundURLSession:completionHandler:` applicatiOn delegate for `AWSS3TransferUtility` to work.
+ 
  @param application       The singleton app object.
  @param identifier        The identifier of the URL session requiring attention.
  @param completionHandler The completion handler to call when you finish processing the events.
@@ -214,17 +222,18 @@ typedef void (^AWSS3TransferUtilityDownloadProgressBlock) (AWSS3TransferUtilityD
 + (void)interceptApplication:(UIApplication *)application
 handleEventsForBackgroundURLSession:(NSString *)identifier
            completionHandler:(void (^)())completionHandler;
+#endif
 
 /**
  Saves the `NSData` to a temporary directory and uploads it to the specified Amazon S3 bucket.
-
+ 
  @param data              The data to upload.
  @param bucket            The Amazon S3 bucket name.
  @param key               The Amazon S3 object key name.
  @param contentType       `Content-Type` of the data.
  @param expression        The container object to configure the upload request.
  @param completionHandler The completion hanlder when the upload completes.
-
+ 
  @return Returns an instance of `AWSTask`. On successful initialization, `task.result` contains an instance of `AWSS3TransferUtilityUploadTask`.
  */
 - (AWSTask<AWSS3TransferUtilityUploadTask *> *)uploadData:(NSData *)data
@@ -236,14 +245,14 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
 
 /**
  Uploads the file to the specified Amazon S3 bucket.
-
+ 
  @param fileURL           The file URL of the file to upload.
  @param bucket            The Amazon S3 bucket name.
  @param key               The Amazon S3 object key name.
  @param contentType       `Content-Type` of the file.
  @param expression        The container object to configure the upload request.
  @param completionHandler The completion hanlder when the upload completes.
-
+ 
  @return Returns an instance of `AWSTask`. On successful initialization, `task.result` contains an instance of `AWSS3TransferUtilityUploadTask`.
  */
 - (AWSTask<AWSS3TransferUtilityUploadTask *> *)uploadFile:(NSURL *)fileURL
@@ -255,12 +264,12 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
 
 /**
  Downloads the specified Amazon S3 object as `NSData`.
-
+ 
  @param bucket            The Amazon S3 bucket name.
  @param key               The Amazon S3 object key name.
  @param expression        The container object to configure the download request.
  @param completionHandler The completion hanlder when the download completes.
-
+ 
  @return Returns an instance of `AWSTask`. On successful initialization, `task.result` contains an instance of `AWSS3TransferUtilityDownloadTask`.
  */
 - (AWSTask<AWSS3TransferUtilityDownloadTask *> *)downloadDataFromBucket:(NSString *)bucket
@@ -270,13 +279,13 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
 
 /**
  Downloads the specified Amazon S3 object to a file URL.
-
+ 
  @param fileURL           The file URL to download the object to. Should not be `nil` even though it is marked as `nullable`.
  @param bucket            The Amazon S3 bucket name.
  @param key               The Amazon S3 object key name.
  @param expression        The container object to configure the download request.
  @param completionHandler The completion hanlder when the download completes.
-
+ 
  @return Returns an instance of `AWSTask`. On successful initialization, `task.result` contains an instance of `AWSS3TransferUtilityDownloadTask`.
  */
 - (AWSTask<AWSS3TransferUtilityDownloadTask *> *)downloadToURL:(nullable NSURL *)fileURL
@@ -292,7 +301,7 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
 
 /**
  Assigns progress feedback and completion handler blocks. This method should be called when the app was suspended while the transfer is still happening.
-
+ 
  @param uploadBlocksAssigner   The block for assigning the upload pregree feedback and completion handler blocks.
  @param downloadBlocksAssigner The block for assigning the download pregree feedback and completion handler blocks.
  */
@@ -306,21 +315,21 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
 
 /**
  Retrieves all running tasks.
-
+ 
  @return An array of `AWSS3TransferUtilityTask`.
  */
 - (AWSTask<NSArray<__kindof AWSS3TransferUtilityTask *> *> *)getAllTasks;
 
 /**
  Retrieves all running upload tasks.
-
+ 
  @return An array of `AWSS3TransferUtilityUploadTask`.
  */
 - (AWSTask<NSArray<AWSS3TransferUtilityUploadTask *> *> *)getUploadTasks;
 
 /**
  Retrieves all running download tasks.
-
+ 
  @return An array of `AWSS3TransferUtilityDownloadTask`.
  */
 - (AWSTask<NSArray<AWSS3TransferUtilityDownloadTask *> *> *)getDownloadTasks;
@@ -394,7 +403,7 @@ handleEventsForBackgroundURLSession:(NSString *)identifier
 
 /**
  Sets value for the request parameter.
-
+ 
  @param value            The request parameter value.
  @param requestParameter The key for the request parameter value.
  */
