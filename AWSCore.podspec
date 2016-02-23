@@ -15,7 +15,10 @@ Pod::Spec.new do |s|
   
   s.source       = { :git => 'https://github.com/aws/aws-sdk-ios.git',
                      :tag => s.version}
-  s.frameworks   = 'UIKit', 'Foundation', 'SystemConfiguration'
+                     
+  s.ios.frameworks   = 'UIKit', 'Foundation', 'SystemConfiguration'
+  s.osx.frameworks   = 'AppKit', 'Foundation', 'SystemConfiguration'
+  
   s.libraries    = 'z', 'sqlite3'
   s.requires_arc = true
 
