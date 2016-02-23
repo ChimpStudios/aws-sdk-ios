@@ -189,8 +189,9 @@
 		0D49FB6B1C7CD5D300DD61DC /* AWSURLRequestRetryHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF558171AB371AB0067F4F1 /* AWSURLRequestRetryHandler.h */; };
 		0D49FB6C1C7CD5D300DD61DC /* AWSEXTScope.h in Headers */ = {isa = PBXBuildFile; fileRef = CE14DF7F1B02C7CE00EF6D09 /* AWSEXTScope.h */; };
 		0D49FB6F1C7CD5D300DD61DC /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE6552191BEC308400DACBC2 /* module.modulemap */; };
-		0D49FB791C7CD62900DD61DC /* FTWDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D49FB751C7CD62900DD61DC /* FTWDevice.h */; };
+		0D49FB791C7CD62900DD61DC /* FTWDevice.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D49FB751C7CD62900DD61DC /* FTWDevice.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D49FB7A1C7CD62900DD61DC /* FTWDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D49FB761C7CD62900DD61DC /* FTWDevice.m */; };
+		0DF25DC91C7CDDBE0037AD5A /* FTWDevice.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0D49FB751C7CD62900DD61DC /* FTWDevice.h */; };
 		BD00001D1AB8C47C004496EF /* AWSSTSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0000091AB8C47C004496EF /* AWSSTSTests.m */; };
 		BD0000211AB8C47C004496EF /* AWSCognitoCredentialsProviderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD00000D1AB8C47C004496EF /* AWSCognitoCredentialsProviderTests.m */; };
 		BD0000221AB8C47C004496EF /* AWSCognitoIdentityServiceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD00000E1AB8C47C004496EF /* AWSCognitoIdentityServiceTests.m */; };
@@ -487,6 +488,7 @@
 			dstPath = "modules/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
+				0DF25DC91C7CDDBE0037AD5A /* FTWDevice.h in CopyFiles */,
 				0D49FB6F1C7CD5D300DD61DC /* module.modulemap in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1176,13 +1178,13 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D49FB791C7CD62900DD61DC /* FTWDevice.h in Headers */,
 				0D49FB2A1C7CD5D300DD61DC /* AWSSignature.h in Headers */,
 				0D49FB2B1C7CD5D300DD61DC /* AWSGZIP.h in Headers */,
 				0D49FB2C1C7CD5D300DD61DC /* AWSFMDB.h in Headers */,
 				0D49FB2D1C7CD5D300DD61DC /* AWSFMResultSet.h in Headers */,
 				0D49FB2E1C7CD5D300DD61DC /* AWSFMDatabasePool.h in Headers */,
 				0D49FB2F1C7CD5D300DD61DC /* AWSFMDatabaseAdditions.h in Headers */,
-				0D49FB791C7CD62900DD61DC /* FTWDevice.h in Headers */,
 				0D49FB301C7CD5D300DD61DC /* AWSFMDatabase.h in Headers */,
 				0D49FB311C7CD5D300DD61DC /* AWSFMDatabaseQueue.h in Headers */,
 				0D49FB321C7CD5D300DD61DC /* AWSSynchronizedMutableDictionary.h in Headers */,
