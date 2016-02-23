@@ -16,13 +16,6 @@
 #include <IOKit/network/IONetworkInterface.h>
 #include <IOKit/network/IOEthernetController.h>
 
-//for sys info
-
-#include <sys/socket.h> // Per msqr
-#include <sys/sysctl.h>
-#include <net/if.h>
-#include <net/if_dl.h>
-
 typedef enum {
 	FTWDeviceFamilyMacBookAir,
 	FTWDeviceFamilyMacBookPro,
