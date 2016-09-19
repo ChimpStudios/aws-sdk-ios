@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "1E6BA78A8A7DE1E4F49E2C6B6512CB8FE8E8ABC3",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "D13F36E92A67D9868ABB048FA18C4224992D7E39" : 0,
+    "1E6BA78A8A7DE1E4F49E2C6B6512CB8FE8E8ABC3" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "4C26DBF3-A4CF-403F-B9F5-AD8E1A61E58D",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "D13F36E92A67D9868ABB048FA18C4224992D7E39" : "..",
+    "1E6BA78A8A7DE1E4F49E2C6B6512CB8FE8E8ABC3" : "aws-sdk-mac\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "AWSiOSSDKv2",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "AWSiOSSDKv2.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/ChimpStudios\/aws-sdk-ios.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "1E6BA78A8A7DE1E4F49E2C6B6512CB8FE8E8ABC3"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/bitbucket.org\/andrewschenk\/ticker-tape.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "D13F36E92A67D9868ABB048FA18C4224992D7E39"
+    }
+  ]
+}

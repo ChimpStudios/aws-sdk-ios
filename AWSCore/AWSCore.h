@@ -30,7 +30,7 @@
 #import "AWSBolts.h"
 #import "AWSGZIP.h"
 #import "AWSFMDB.h"
-#import "FTWDevice.h"
+//#import "FTWDevice.h"
 
 #import "AWSSTS.h"
 #import "AWSCognitoIdentity.h"

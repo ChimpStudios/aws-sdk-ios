@@ -19,13 +19,6 @@
 		0D49FAB01C7CD53F00DD61DC /* AWSS3TransferManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDF55A0A1AB377010067F4F1 /* AWSS3TransferManager.h */; };
 		0D49FAB11C7CD53F00DD61DC /* AWSS3.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDF55A0C1AB377010067F4F1 /* AWSS3.h */; };
 		0D49FAB21C7CD53F00DD61DC /* AWSS3Model.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BDF55A0E1AB377010067F4F1 /* AWSS3Model.h */; };
-		0D49FAB41C7CD53F00DD61DC /* AWSS3Model.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF55A0E1AB377010067F4F1 /* AWSS3Model.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D49FAB51C7CD53F00DD61DC /* AWSS3PreSignedURL.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF55A081AB377010067F4F1 /* AWSS3PreSignedURL.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D49FAB61C7CD53F00DD61DC /* AWSS3Resources.h in Headers */ = {isa = PBXBuildFile; fileRef = BDB73D851B1D3F4900717559 /* AWSS3Resources.h */; };
-		0D49FAB71C7CD53F00DD61DC /* AWSS3TransferUtility.h in Headers */ = {isa = PBXBuildFile; fileRef = CE83D0E81B7171EB004A42E4 /* AWSS3TransferUtility.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D49FAB81C7CD53F00DD61DC /* AWSS3TransferManager.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF55A0A1AB377010067F4F1 /* AWSS3TransferManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D49FAB91C7CD53F00DD61DC /* AWSS3Service.h in Headers */ = {isa = PBXBuildFile; fileRef = CEE7DE721AC1E1DA0095C4B7 /* AWSS3Service.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0D49FABA1C7CD53F00DD61DC /* AWSS3.h in Headers */ = {isa = PBXBuildFile; fileRef = BDF55A0C1AB377010067F4F1 /* AWSS3.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0D49FABC1C7CD53F00DD61DC /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = CE65523E1BEC368100DACBC2 /* module.modulemap */; };
 		BD00003A1AB8C526004496EF /* credentials.json in Resources */ = {isa = PBXBuildFile; fileRef = BD0000391AB8C526004496EF /* credentials.json */; };
 		BD0000581AB8E18E004496EF /* AWSTestUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD0000571AB8E18E004496EF /* AWSTestUtility.m */; };
@@ -300,20 +293,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0D49FAB31C7CD53F00DD61DC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0D49FAB41C7CD53F00DD61DC /* AWSS3Model.h in Headers */,
-				0D49FAB51C7CD53F00DD61DC /* AWSS3PreSignedURL.h in Headers */,
-				0D49FAB61C7CD53F00DD61DC /* AWSS3Resources.h in Headers */,
-				0D49FAB71C7CD53F00DD61DC /* AWSS3TransferUtility.h in Headers */,
-				0D49FAB81C7CD53F00DD61DC /* AWSS3TransferManager.h in Headers */,
-				0D49FAB91C7CD53F00DD61DC /* AWSS3Service.h in Headers */,
-				0D49FABA1C7CD53F00DD61DC /* AWSS3.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		BDF55A061AB376F50067F4F1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -338,7 +317,6 @@
 				0D49FAA41C7CD53F00DD61DC /* Sources */,
 				0D49FAAB1C7CD53F00DD61DC /* Frameworks */,
 				0D49FAAC1C7CD53F00DD61DC /* CopyFiles */,
-				0D49FAB31C7CD53F00DD61DC /* Headers */,
 				0D49FABB1C7CD53F00DD61DC /* CopyFiles */,
 			);
 			buildRules = (
@@ -411,7 +389,7 @@
 		BDF559E41AB376DC0067F4F1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Amazon Web Services";
 				TargetAttributes = {
 					BDF559EB1AB376DC0067F4F1 = {
@@ -528,12 +506,14 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULEMAP_FILE = "$(PRODUCT_NAME:c99extidentifier)/module.modulemap";
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
@@ -549,12 +529,14 @@
 			buildSettings = {
 				CLANG_ENABLE_MODULES = NO;
 				CLANG_ENABLE_MODULE_DEBUGGING = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				DEAD_CODE_STRIPPING = NO;
 				DEFINES_MODULE = YES;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 				);
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MODULEMAP_FILE = "$(PRODUCT_NAME:c99extidentifier)/module.modulemap";
 				OTHER_CFLAGS = "-fembed-bitcode";
 				OTHER_LDFLAGS = "";
@@ -623,10 +605,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
@@ -637,8 +615,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
@@ -646,6 +626,7 @@
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -658,7 +639,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -670,10 +652,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = (
-					"$(ARCHS_STANDARD)",
-					armv7s,
-				);
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = NO;
@@ -684,21 +662,25 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/include/**";
